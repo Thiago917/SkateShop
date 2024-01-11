@@ -8,6 +8,7 @@ function App() {
       <AppRoutes />
       <p>teste </p>
       <p>teste 2</p>
+      <p>Teste Final</p>
     </div>
   )
 }

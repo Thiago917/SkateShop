@@ -8,10 +8,6 @@ function App() {
       <AppRoutes />
     </div>
   )
-
-    
-
-  
 }
 
 export default App

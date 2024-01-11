@@ -63,17 +63,17 @@ svg:hover{
 }
 
 .email, .senha, .nome{
-    padding: 0 0px 10px 20px;
+    padding: 0 0px 10px 5px;
     background-color: transparent;
     border: none;
     outline: none;
-    border-bottom: 2px solid rgba(248, 248, 255, 0.856);
+    border-bottom: 2px solid rgba(2, 2, 2, 0.658);
     color: ghostwhite;
     font-size: 1.2rem;
 }
 
 ::placeholder{
-    color: rgba(248, 248, 255, 0.596);
+    color: ghostwhite;
     font-size: 1.2rem;
 }
 

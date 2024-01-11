@@ -1,0 +1,53 @@
+.title-cadastro{
+    color: ghostwhite
+}
+
+.form-cadastro{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastro-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    width: 75%;
+    min-height: 35vh;
+
+}
+
+.nomes{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.email-cadastro, .nome-cadastro, .sobrenome-cadastro, .senha-cadastro, .confirm-senha-cadastro{
+    width: 100%;
+    padding: 0 0 10px 5px;
+}
+
+.cadastro-eye-icon{
+    position: absolute;
+    top: 48%;
+    right: 15%;
+}
+
+.second-cadastro-eye-icon{
+    position: absolute;
+    bottom: 34%;
+    right: 15%;
+}
+
+.btn-cadastro{
+    min-height: 5vh;
+    padding-bottom: 10%;
+}
+
+.cadastro-seend-button{
+    height: 100%;
+}

@@ -9,7 +9,7 @@ const Cadastro = () => {
     <div className="container-cadastro">
         <h1 className='title title-cadastro'>CADASTRE-SE</h1>
         <div className="form-container-cadastro form-container">
-          <form className='form-cadastro'>
+          <form action='../validation/Cadastro.php' method='post' className='form-cadastro'>
             <CadastroForm />
             <div className="btn-cadastro">
               <button type='submit' className='cadastro-seend-button seend-button'>CADASTRE-SE</button>

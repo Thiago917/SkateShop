@@ -35,17 +35,20 @@
     position: absolute;
     top: 48%;
     right: 15%;
+    cursor: pointer;
 }
 
 .second-cadastro-eye-icon{
     position: absolute;
     bottom: 34%;
     right: 15%;
+    cursor: pointer;
 }
 
 .btn-cadastro{
     min-height: 5vh;
     padding-bottom: 10%;
+
 }
 
 .cadastro-seend-button{

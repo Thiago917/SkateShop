@@ -19,13 +19,13 @@ p{
 
 .title{
     color: rgba(0, 0, 0, 0.63);
-    font-family: 'Rubik Doodle Shadow', system-ui;
+    font-family: 'Lilita One', sans-serif;
     font-size: 7rem;
     letter-spacing: 1.8rem;
 }
 
 svg{
-    fill: rgb(231, 231, 231);
+    fill: rgb(41, 41, 41);
     height: 3vh;
     width: 1.2vw;
     transition: .2s;

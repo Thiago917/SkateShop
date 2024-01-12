@@ -16,8 +16,7 @@
     align-items: center;
     gap: 35px;
     width: 75%;
-    min-height: 35vh;
-
+    margin-bottom: 18%;
 }
 
 .nomes{
@@ -33,22 +32,21 @@
 
 .cadastro-eye-icon{
     position: absolute;
-    top: 48%;
+    top: 41%;
     right: 15%;
     cursor: pointer;
 }
 
 .second-cadastro-eye-icon{
     position: absolute;
-    bottom: 34%;
+    bottom: 41.5%;
     right: 15%;
     cursor: pointer;
 }
-
 .btn-cadastro{
+    width: 65%;
     min-height: 5vh;
     padding-bottom: 10%;
-
 }
 
 .cadastro-seend-button{

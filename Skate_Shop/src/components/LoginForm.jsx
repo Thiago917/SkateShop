@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FaEye } from 'react-icons/fa'
 import { FaEyeSlash } from 'react-icons/fa'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
@@ -26,10 +26,10 @@ const Form = () => {
 
   const validation = () =>{
     if(email === correctEmail && senha === correctSenha){
-      <NavLink to='/store'></NavLink>
+      console.log('Aqui era pra funcionar a parte do link')
     }
     else{
-      alert('Email ou senha invalidos')
+      alert('--------------------| EMAIL OU SENHA INVALIDOS!! |--------------------')
     }
           
   }
@@ -44,9 +44,9 @@ const Form = () => {
       </div>
 
       <div className="btn">
-        <input type='submit' value='ENTRAR' className='seend-button' onClick={() => validation}/>
+        <Link to='/store'><input type='submit' value='ENTRAR' className='seend-button' /></Link>
       </div>
-      <p>Não tem conta ainda? <NavLink to='/cadastro'>Criar conta</NavLink></p>
+      <p>Não tem conta ainda? <Link to='/cadastro'>Criar conta</Link></p>
     </div>
     </form>
   )

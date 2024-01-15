@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FaEye } from 'react-icons/fa'
 import { FaEyeSlash } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 
@@ -22,11 +22,12 @@ const Form = () => {
 
   const correctEmail = 'thiago@thiago'
   const correctSenha = 'thiago'
-  const handleLogin = (e) => e.preventDefault()
 
-  const validation = () =>{
+
+  const navigate = useNavigate()
+  const handleOnLogin = () =>{
     if(email === correctEmail && senha === correctSenha){
-      console.log('Aqui era pra funcionar a parte do link')
+      window.location='../pages/Store.jsx'
     }
     else{
       alert('--------------------| EMAIL OU SENHA INVALIDOS!! |--------------------')
@@ -35,7 +36,7 @@ const Form = () => {
   }
 
   return (
-    <form action='' method='' className='form-login' onSubmit={handleLogin}>
+    <form action='' method='' className='form-login' onSubmit={(e) => e.preventDefault()}>
     <div className="inputs">
       <input type="email" placeholder='Insira seu email...' id='email' className='email' name='email' value={email} onChange={handleChangeEmail} required/>
       <input type={eyeLook} placeholder='Insira sua senha...' id='senha' className='senha' name='senha' value={senha} onChange={handleChangeSenha} required/>
@@ -44,7 +45,7 @@ const Form = () => {
       </div>
 
       <div className="btn">
-        <Link to='/store'><input type='submit' value='ENTRAR' className='seend-button' /></Link>
+       <button type='submit' className='seend-button' onClick={handleOnLogin}>Entrar</button>
       </div>
       <p>Não tem conta ainda? <Link to='/cadastro'>Criar conta</Link></p>
     </div>

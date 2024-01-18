@@ -79,7 +79,7 @@ const CadastroForm = () => {
         <div className="btn-cadastro">
           <button type='submit' className='cadastro-seend-button seend-button' >CADASTRE-SE</button>
         </div>
-        <p>Já possui conta? <Link to='/' className='link'>Faça login</Link></p>
+        <p className='comentary'>Já possui conta? <Link to='/' className='link'>Faça login</Link></p>
     </form>
   )
 }

@@ -1,0 +1,86 @@
+
+.calca-container{
+    display: flex;
+    gap: 2%;
+
+}
+
+.calca-content{
+    background-color: rgb(240, 240, 240);
+    box-shadow: 3px 3px 30px rgba(128, 128, 128, 0.466);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 40vw;
+    gap: 5vh;
+
+}
+
+.calca-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
+    padding: 20px;
+    box-shadow: 3px 3px 30px rgba(99, 98, 98, 0.466);
+    gap: 10%;
+}
+
+.product-description{
+    font-size: 17px;
+    font-family: 'Dela Gothic One';
+}
+
+.company{
+    padding-bottom: 2px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid black;
+    opacity: 1;
+    transition-duration: .2s;
+}
+
+.company:hover{
+    opacity: .8;
+    letter-spacing: 2px;
+}
+
+.prices{
+    display: grid;
+    place-items: center;
+    margin-top: 20vh;
+    gap: 5px;
+    border: 2px solid rgba(255, 0, 0, 0.774);
+    box-shadow:1px 1px 10px rgba(255, 0, 0, 0.774);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.quantidade{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.buy-btn{
+    width: 10vw;
+    height: 4.5vh;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+.buy-btn:hover{
+    border: 2px solid transparent;
+    background-color: rgb(102, 3, 3);
+    color: ghostwhite;
+    letter-spacing: 5px;
+
+}

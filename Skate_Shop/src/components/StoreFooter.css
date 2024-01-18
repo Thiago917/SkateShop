@@ -1,0 +1,63 @@
+.store-footer{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    width: 100vw;
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.95); 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 18vh;
+    margin-top: 2.2vh;
+}
+
+.description-content{
+    color: ghostwhite;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.description{
+    opacity: .8;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+.description:hover{
+    opacity: 1;
+    scale: 1.009;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-sociais-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: ghostwhite;
+    text-align: center;
+}
+
+.redes-sociais-icons .icons{
+    display: flex;
+    gap: 15px;
+}
+
+.horizontal-line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(61, 61, 61);
+    min-height: 4vh;
+    font-size: 13px;
+    color: rgba(248, 248, 255, 0.733);
+}

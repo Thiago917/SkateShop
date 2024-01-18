@@ -1,8 +1,15 @@
 import React from 'react'
 import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
+import IntroStore from './pages/InstroStore'
+import Contato from './pages/sub-pages/Contato'
+import Comunidade from './pages/sub-pages/Comunidade'
+import Shop from './pages/sub-pages/Shop'
+import Entrega from './pages/sub-pages/Entrega'
 import Store from './pages/Store'
-import {BrowserRouter, Routes, Route } from 'react-router-dom'
+import PaginaProduto from './pages/PaginaProduto'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const AppRoutes = () => {
   return (
@@ -10,7 +17,13 @@ const AppRoutes = () => {
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/cadastro' element={<Cadastro />} />
-        <Route path='/store' element={<Store />} />
+        <Route path='/introStore' element={<IntroStore />} />
+        <Route path='/contato' element={<Contato />} />
+        <Route path='/comunidade' element={<Comunidade />} />
+        <Route path='/shop' element={<Shop />} />
+        <Route path='/entrega' element={<Entrega />} />
+        <Route path='/store' element={<Store />} /> 
+        <Route path='/produto' element={<PaginaProduto />} /> 
       </Routes>
     </BrowserRouter>
   )

@@ -1,0 +1,40 @@
+.first-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.815);
+}
+
+.navbar{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.logo{
+    height: 80%;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.logo:hover{
+    scale: 1.05;
+}
+
+.links-shop{
+    color: ghostwhite;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+    transition-duration: .4s;
+}
+
+.links-shop:hover{
+    border-bottom: 2px solid rgb(201, 3, 3);
+    letter-spacing: 5px;
+}

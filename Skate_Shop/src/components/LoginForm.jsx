@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FaEye } from 'react-icons/fa'
 import { FaEyeSlash } from 'react-icons/fa'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
@@ -20,14 +20,16 @@ const Form = () => {
     setSenha(event.target.value);
   }
 
-  const correctEmail = 'thiago@thiago'
-  const correctSenha = 'thiago'
+  const emailThiago = 'thiago@thiago'
+  const senhaThiago = 'thiago'
 
+  const emailAndrey = 'andrey@andrey'
+  const senhaAndrey = 'andrey'
 
-  const navigate = useNavigate()
   const handleOnLogin = () =>{
-    if(email === correctEmail && senha === correctSenha){
-      window.location='../pages/Store.jsx'
+    if((email === emailThiago && senha === senhaThiago) || (email === emailAndrey && senha === senhaAndrey)){
+      alert('Login efetuado com suceso!!')
+      return setTimeout(window.location='./introStore', 2500)
     }
     else{
       alert('--------------------| EMAIL OU SENHA INVALIDOS!! |--------------------')
@@ -47,7 +49,7 @@ const Form = () => {
       <div className="btn">
        <button type='submit' className='seend-button' onClick={handleOnLogin}>Entrar</button>
       </div>
-      <p>Não tem conta ainda? <Link to='/cadastro'>Criar conta</Link></p>
+      <p className='asked-question'>Não tem conta ainda? <Link to='/cadastro' className='link'>Criar conta</Link></p>
     </div>
     </form>
   )

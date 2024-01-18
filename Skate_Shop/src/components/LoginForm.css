@@ -1,16 +1,16 @@
-a{
+.link{
     text-decoration: none;
     color: ghostwhite;
     transition-duration: .5s;
 }
 
-a:hover{
+.link:hover{
     font-size:15px;
     opacity: .4;
     border-bottom: 1px solid black;
 }
 
-p{
+.asked-question{
     align-items: left;
     margin-bottom: 30%;
     color: ghostwhite;

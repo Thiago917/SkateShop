@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: arial; */
+}
+
+.product-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+}

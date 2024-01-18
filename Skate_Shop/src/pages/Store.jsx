@@ -14,6 +14,7 @@ const Store = () => {
   }
   return (
     <div className='store-container'>
+    <div className='bg-shop'></div>  
     <StoreNavbar />
       <h1 className='store-title'>PRODUTOS</h1>
       <div className="carrossel">

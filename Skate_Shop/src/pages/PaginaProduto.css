@@ -4,10 +4,117 @@
     /* font-family: arial; */
 }
 
-.product-container{
+.individual-produto-container{
     height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 5%;
+}
+
+.produto-container{
+    display: flex;
+    gap: 2%;
+
+}
+
+.produto-content{
+    background-color: rgb(240, 240, 240);
+    box-shadow: 3px 3px 30px rgba(128, 128, 128, 0.466);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 40vw;
+    gap: 5vh;
+
+}
+
+.produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
+    padding: 20px;
+    box-shadow: 3px 3px 30px rgba(99, 98, 98, 0.466);
+    gap: 17%;
+}
+
+.produto-description{
+    font-size: 17px;
+    font-family: 'Dela Gothic One';
+}
+
+.company{
+    padding-bottom: 2px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid black;
+    opacity: 1;
+    transition-duration: .2s;
+}
+
+.company:hover{
+    opacity: .8;
+    letter-spacing: 2px;
+}
+
+.prices{
+    display: grid;
+    place-items: center;
+    padding-bottom: 20%;
+    gap: 5px;
+    border: 2px solid rgba(255, 70, 0, 0.774);
+    box-shadow:1px 1px 10px rgba(255, 0, 0, 0.774);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.select-drescription{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.quantidade, .tamanho{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.quantidade{
+    padding-right: 10px;
+    border: 2px solid rgba(255, 0, 0, 0.774);
+    box-shadow:1px 1px 10px rgba(255, 0, 0, 0.34);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.tamanho{
+    padding-left: 10px;
+    border: 2px solid rgba(255, 0, 0, 0.774);
+    box-shadow:1px 1px 10px rgba(255, 0, 0, 0.314);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.buy-btn{
+    width: 12vw;
+    height: 4.5vh;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+.buy-btn:hover{
+    border: 2px solid transparent;;
+    background-color: rgb(102, 3, 3);
+    color: ghostwhite;
+    letter-spacing: 6px;
+
 }

@@ -6,7 +6,7 @@
 }
 
 footer{
-    background-color: rgba(0, 0, 0, 0.95); 
+    background-color: rgba(0, 0, 0); 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -52,6 +52,11 @@ footer{
     gap: 15px;
 }
 
+.icon{
+    box-shadow: 1px 1px 10px rgba(248, 248, 255, 0.295);
+    border-radius: 50%;
+}
+
 .horizontal-line{
     display: flex;
     justify-content: center;
@@ -60,4 +65,15 @@ footer{
     min-height: 4vh;
     font-size: 13px;
     color: rgba(248, 248, 255, 0.733);
+}
+
+.copyright{
+    opacity: .8;
+    transition-duration: .1s;
+    border-bottom: 1px solid transparent;
+}
+
+.copyright:hover{
+    opacity: 1;
+    border-bottom: 1px solid #fff;
 }

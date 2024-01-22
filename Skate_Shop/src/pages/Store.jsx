@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
   {
     id: 1,
     nome: 'Calça Cargo Caqui',
-    preco:'R$119,90',
+    preco:'R$ 119,90',
     imagem: calca,
     empresa: 'Mizac',
     tamanho: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG'],
@@ -22,7 +22,7 @@ import { Link } from 'react-router-dom'
   {
     id: 2,
     nome: 'Camiseta Independent',
-    preco: 'R$79,90',
+    preco: 'R$ 79,90',
     imagem: camiseta,
     empresa: 'Indepent Store',
     tamanho: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG'],
@@ -31,7 +31,7 @@ import { Link } from 'react-router-dom'
   {
     id: 3,
     nome: 'Moletom Santa Cruz',
-    preco: 'R$199,90',
+    preco: 'R$ 199,90',
     imagem: moletom,
     empresa: 'Santa Cruz',
     tamanho: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG'],
@@ -40,7 +40,7 @@ import { Link } from 'react-router-dom'
   {
     id: 4,
     nome: 'Tenis New Balance',
-    preco: 'R$800,00',
+    preco: 'R$ 800,00',
     imagem: tenis,
     empresa: 'New Balance',
     tamanho: ['36', '37', '38', '39', '40','41', '42'],

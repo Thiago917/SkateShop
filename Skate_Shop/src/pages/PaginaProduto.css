@@ -65,37 +65,84 @@
     place-items: center;
     padding-bottom: 20%;
     gap: 5px;
-    border: 2px solid rgba(255, 70, 0, 0.774);
-    box-shadow:1px 1px 10px rgba(255, 0, 0, 0.774);
+    border: 2px solid rgba(44, 44, 44, 0.774);
     border-radius: 10px;
     padding: 10px;
-}
+}   
 
 .select-drescription{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: left;
+    gap: 20px;
 }
 .quantidade, .tamanho{
-    display: flex;
     gap: 10px;
-    justify-content: center;
 }
 
 .quantidade{
-    padding-right: 10px;
-    border: 2px solid rgba(255, 0, 0, 0.774);
-    box-shadow:1px 1px 10px rgba(255, 0, 0, 0.34);
-    border-radius: 10px;
-    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
 }
 
-.tamanho{
-    padding-left: 10px;
-    border: 2px solid rgba(255, 0, 0, 0.774);
-    box-shadow:1px 1px 10px rgba(255, 0, 0, 0.314);
+.touch-elements{
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    margin-left: 30%;
     border-radius: 10px;
-    padding: 10px;
+}
+.quantidade-numero{
+    height: 4vh;
+    width: 2vw;
+    background-color: rgba(211, 211, 211, 0.418);
+    display: grid;
+    place-items: center;
+    font-weight: 500;
+}
+.positivo-button, .negativo-button{
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.658);
+    height: 4vh;
+    width: 2vw;
+    color: rgba(0, 0, 0, 0.758);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tamanho{  
+    display: grid;
+    justify-content: left;
+    align-items: flex-start;
+    font-weight: bold;
+}
+
+.size-btns{
+    display: flex;
+    gap: 5px;
+}
+
+.btn{
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.658);
+    height: 5vh;
+    width: 2.5vw;
+    color: rgba(0, 0, 0, 0.758);
+    text-align: center;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+
+.active{
+    background-color: black;
+    border: none;
+    height: 5vh;
+    width: 2.5vw;
+    color: ghostwhite;
+    text-align: center;
+    cursor: pointer;
 }
 
 .buy-btn{

@@ -1,4 +1,3 @@
-import React from 'react'
 import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 import IntroStore from './pages/InstroStore'
@@ -8,6 +7,7 @@ import Shop from './pages/sub-pages/Shop'
 import Entrega from './pages/sub-pages/Entrega'
 import Store from './pages/Store'
 import PaginaProduto from './pages/PaginaProduto'
+import Compra from './pages/Compra'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -24,6 +24,7 @@ const AppRoutes = () => {
         <Route path='/entrega' element={<Entrega />} />
         <Route path='/store' element={<Store />} /> 
         <Route path='/produto/:id' element={<PaginaProduto />} /> 
+        <Route path='/compra/:id' element={<Compra />} /> 
       </Routes>
     </BrowserRouter>
   )

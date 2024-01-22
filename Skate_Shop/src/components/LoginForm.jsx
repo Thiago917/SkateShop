@@ -37,6 +37,7 @@ const Form = () => {
           
   }
 
+  console.log(email, senha)
   return (
     <form action='' method='' className='form-login' onSubmit={(e) => e.preventDefault()}>
     <div className="inputs">

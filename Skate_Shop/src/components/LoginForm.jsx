@@ -41,13 +41,13 @@ const Form = () => {
   return (
     <form action='' method='' className='form-login' onSubmit={(e) => e.preventDefault()}>
     <div className="inputs">
-      <input type="email" placeholder='Insira seu email...' id='email' className='email' name='email' value={email} onChange={handleChangeEmail} required/>
-      <input type={eyeLook} placeholder='Insira sua senha...' id='senha' className='senha' name='senha' value={senha} onChange={handleChangeSenha} required/>
+      <input type="email" placeholder='Insira seu email...' id='email' className='login-email' name='email' value={email} onChange={handleChangeEmail} required/>
+      <input type={eyeLook} placeholder='Insira sua senha...' id='senha' className='login-senha' name='senha' value={senha} onChange={handleChangeSenha} required/>
       <div className="eye-icon" onClick={() => eyeLook === 'password' ? setEyeLook('text') : setEyeLook('password', <closedEyeIcon />)}>
         {eyeLook === 'password' ? <FaEye /> : <FaEyeSlash />}
       </div>
 
-      <div className="btn">
+      <div className="login-btn">
        <button type='submit' className='seend-button' onClick={handleOnLogin}>Entrar</button>
       </div>
       <p className='asked-question'>Não tem conta ainda? <Link to='/cadastro' className='link'>Criar conta</Link></p>

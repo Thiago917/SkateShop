@@ -1,11 +1,11 @@
 *{
     margin: 0;
     padding: 0;
-    /* font-family: arial; */
 }
 
 .individual-produto-container{
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -15,7 +15,6 @@
 .produto-container{
     display: flex;
     gap: 2%;
-
 }
 
 .produto-content{
@@ -28,19 +27,22 @@
     height: 75vh;
     width: 40vw;
     gap: 5vh;
-
 }
 
-.produto{
+.produtos{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 20vw;
-    padding: 20px;
-    box-shadow: 3px 3px 30px rgba(99, 98, 98, 0.466);
+    padding: 30px;
+    box-shadow: 3px 3px 30px rgba(99, 98, 98, 0.466) ;
     gap: 17%;
 }
 
+.produto-imagem{
+    box-sizing: border-box;
+    height: 70%;
+}
 .produto-description{
     font-size: 17px;
     font-family: 'Dela Gothic One';
@@ -132,7 +134,7 @@
     color: rgba(0, 0, 0, 0.758);
     text-align: center;
     cursor: pointer;
-    transition-duration: .4s;
+    transition-duration: .3s;
 }
 
 .active{
@@ -143,6 +145,12 @@
     color: ghostwhite;
     text-align: center;
     cursor: pointer;
+    transition-duration: .3s;
+}
+
+.btn:hover, .active:hover{
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.568);
+    border-radius: 5px;
 }
 
 .buy-btn{

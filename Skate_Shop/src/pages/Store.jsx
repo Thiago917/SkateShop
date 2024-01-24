@@ -1,13 +1,23 @@
-import StoreNavbar from '../components/StoreNavbar'
 import calca from '../assets/calça-cargo.png'
 import camiseta from '../assets/camiseta-independent.png'
 import moletom from '../assets/moletom-santa-cruz.png' 
 import tenis from '../assets/tenis-new-balance.png' 
+import skate from '../assets/skate.png'
+import touca from '../assets/touca-high.png'
+// produtos
+
+import StoreNavbar from '../components/StoreNavbar'
 import StoreFooter from '../components/StoreFooter'
+// componentes
+
+
+import { Link } from 'react-router-dom'
+import { useRef } from 'react'
+import { VscArrowCircleLeft, VscArrowCircleRight } from "react-icons/vsc";
+// funções
 
 import './Store.css'
-import { Link } from 'react-router-dom'
-
+// estilos
 
   export const produtos = [
   {
@@ -18,7 +28,7 @@ import { Link } from 'react-router-dom'
     empresa: 'Mizac',
     tamanho: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG'],
   },
-
+  
   {
     id: 2,
     nome: 'Camiseta Independent',
@@ -36,7 +46,7 @@ import { Link } from 'react-router-dom'
     empresa: 'Santa Cruz',
     tamanho: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG'],
   },
-
+  
   {
     id: 4,
     nome: 'Tenis New Balance',
@@ -44,65 +54,68 @@ import { Link } from 'react-router-dom'
     imagem: tenis,
     empresa: 'New Balance',
     tamanho: ['36', '37', '38', '39', '40','41', '42'],
-  },]
+  },
+  {
+    id: 5,
+    nome: 'Skate Astronauta',
+    preco: 'R$ 399,90',
+    imagem: skate,
+    empresa: 'Sk8 Store',
+    tamanho: ['36', '37', '38', '39', '40','41', '42'],
+  },
+  { 
+    id: 6,
+    nome: 'Touca High Company',
+    preco: 'R$ 149,90',
+    imagem: touca,
+    empresa: 'High Company',
+    tamanho: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG'],
+  },    
 
-
-  const Store = () => {
-
+]
+const Store = () => {
+  const carousel = useRef( null )
+    
+  const leftClick = (e) =>{
+    e.preventDefault()
+    carousel.current.scrollLeft -= carousel.current.offsetWidth
+  }
+  const rightClick = (e) =>{
+    e.preventDefault()
+    carousel.current.scrollLeft += carousel.current.offsetWidth
+  }
   
+
   return (
-    <div className='store-container'>
-    <div className='bg-shop'></div>  
+    <div className='store-container'> 
     <StoreNavbar />
       <h1 className='store-title'>PRODUTOS</h1>
-      
-          <div className="carrossel">
-          <div className="products-content">
-            <p className='product-description'>{produtos[0].nome}</p>
-            <div className="product-img">
-              <Link to={`/produto/${produtos[0].id}`}> 
-                <img src={produtos[0].imagem} alt={produtos[0].nome} className='product'  />
-              </Link>
-          </div>
-          <p className='product-description'>{produtos[0].preco}</p>
-        </div>
-        
-        <div className="products-content">
-          <p className='product-description'>{produtos[1].nome}</p>
-          <div className="product-img">
-            <Link to={`/produto/${produtos[1].id}`}>
-              <img src={produtos[1].imagem} alt={produtos[1].nome} className='product' />
-            </Link>
-          </div>
-          <p className='product-description'>{produtos[1].preco}</p>
-        </div>
-        
-        <div className="products-content">
-          <p className='product-description'>{produtos[2].nome}</p>
-          <div className="product-img">
-          <Link to={`/produto/${produtos[2].id}`}>
-              <img src={produtos[2].imagem} alt={produtos[2].nome} className='product' />
-            </Link>
-          </div>
-          <p className='product-description'>{produtos[2].preco}</p>
-        </div>
-        
-        <div className="products-content">
-          <p className='product-description'>{produtos[3].nome}</p>
-          <div className="product-img">
-          <Link to={`/produto/${produtos[3].id}`}>
-            <img src={produtos[3].imagem} alt={produtos[3].nome} className='product' />
-          </Link>
-          </div>
-          <p className='product-description'>{produtos[3].preco}</p>
-        </div>
-        
-      </div>
+      <div className="store">
+        <VscArrowCircleLeft className='left-arrow' onClick={leftClick} />
+      <div className="carrossel" ref={carousel}>
 
+      {produtos.map((item) => {const {id, nome, preco, imagem} = item;
+        return(
+          <div className="products-content" key={id}>
+
+              <div className="product-img">
+                <Link to={`/produto/${item.id}`}> 
+                  <img src={imagem} alt={nome} className='produto'  />
+                </Link>
+              </div>
+            <div className="info">
+              <p className='product-description name'>{nome}</p>
+              <p className='product-description preco'>{preco}</p>
+            </div>
+
+          </div>
+            )
+          })}
+          </div>
+          <VscArrowCircleRight className='right-arrow' onClick={rightClick}/>
+          </div>
       <StoreFooter />
     </div>
-        
-
   )
 }
 

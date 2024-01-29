@@ -18,7 +18,7 @@
 }
 
 .title{
-    color: rgba(0, 0, 0, 0.63);
+    color: ghostwhite;
     font-family: 'Lilita One', sans-serif;
     font-size: 7rem;
     letter-spacing: 1.8rem;
@@ -36,8 +36,8 @@ svg:hover{
 }
 
 .form-container{
-    height: 50vh;
-    width: 30vw;
+    height: 55vh;
+    width: 25vw;
     display: flex;
     justify-content: center;
     padding-top: 5%;
@@ -49,7 +49,7 @@ svg:hover{
     transition-duration: .2s;
 }
 .form-login{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,8 +77,8 @@ svg:hover{
 }
 
 ::placeholder{
-    color: ghostwhite;
-    font-size: 1.2rem;
+    color: rgba(248, 248, 255, 0.63);
+    font-size: 1.1rem;
 }
 
 .eye-icon{
@@ -87,13 +87,13 @@ svg:hover{
     background-image: url('../assets/on.svg');
     cursor: pointer;
     position: absolute;
-    margin-left: 56%;
-    margin-bottom: 36%;
+    top: 37%;
+    right: 18%;
 }
 
 .login-btn{
-    width: 65%;
-    height: 6vh;
+    width: 75%;
+    min-height: 5vh;
 }
 .seend-button{
     width: 100%;
@@ -101,7 +101,7 @@ svg:hover{
     background-color: transparent;
     border: 2px solid ghostwhite;
     cursor: pointer;
-    border: 2px solid #ffffff8c;
+    border: 2px solid #ffffffc4;
     border-radius: 15px;
     color: ghostwhite;
     font-size: 20px;
@@ -113,7 +113,5 @@ svg:hover{
 .seend-button:hover{
     scale: 1.01;
     letter-spacing: 10px;
-    border: 2px solid rgba(0, 0, 0, 0.555);
-    color:rgba(0, 0, 0, 0.555);
 }
 

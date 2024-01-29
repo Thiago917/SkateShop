@@ -4,6 +4,8 @@ import moletom from '../assets/moletom-santa-cruz.png'
 import tenis from '../assets/tenis-new-balance.png' 
 import skate from '../assets/skate.png'
 import touca from '../assets/touca-high.png'
+import bermuda from '../assets/bermuda.png'
+import tenis_puma from '../assets/tenis-puma.png'
 // produtos
 
 import StoreNavbar from '../components/StoreNavbar'
@@ -11,9 +13,12 @@ import StoreFooter from '../components/StoreFooter'
 // componentes
 
 
-import { Link } from 'react-router-dom'
-import { useRef } from 'react'
+import { Link, useSubmit } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
 import { VscArrowCircleLeft, VscArrowCircleRight } from "react-icons/vsc";
+import { useState } from 'react'
+import axios from 'axios'
+import { api } from '../provider'
 // funções
 
 import './Store.css'
@@ -57,7 +62,7 @@ import './Store.css'
   },
   {
     id: 5,
-    nome: 'Skate Astronauta',
+    nome: 'Skate Montado',
     preco: 'R$ 399,90',
     imagem: skate,
     empresa: 'Sk8 Store',
@@ -65,16 +70,33 @@ import './Store.css'
   },
   { 
     id: 6,
+    nome: 'Tenis Puma Trinity',
+    preco: 'R$ 550,00',
+    imagem: tenis_puma,
+    empresa: 'Puma',
+    tamanho: ['36', '37', '38', '39', '40','41', '42'],
+  },
+  { 
+    id: 7,
     nome: 'Touca High Company',
     preco: 'R$ 149,90',
     imagem: touca,
     empresa: 'High Company',
     tamanho: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG'],
-  },    
-
+  }, 
+  { 
+    id: 8,
+    nome: 'Bermuda Overcome',
+    preco: 'R$ 149,90',
+    imagem: bermuda,
+    empresa: 'Overcome',
+    tamanho: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG'],
+  }, 
 ]
+ 
+
 const Store = () => {
-  const carousel = useRef( null )
+  const carousel = useRef()
     
   const leftClick = (e) =>{
     e.preventDefault()
@@ -83,39 +105,57 @@ const Store = () => {
   const rightClick = (e) =>{
     e.preventDefault()
     carousel.current.scrollLeft += carousel.current.offsetWidth
+
+  }
+
+  const addToCar = () =>{
+    //
   }
   
+  const [ cart, setCart ] = useState([])
 
+  const fetchData = () =>{
+    api.get('/carrinho').then((response) => setCart(response.data))
+    cart.length <= 0 ? console.log('') : console.log('')
+  }
+
+    // useEffect(() => {
+    //   axios 
+    //   fetchData()
+    // }, [])
+  
   return (
-    <div className='store-container'> 
-    <StoreNavbar />
-      <h1 className='store-title'>PRODUTOS</h1>
-      <div className="store">
-        <VscArrowCircleLeft className='left-arrow' onClick={leftClick} />
-      <div className="carrossel" ref={carousel}>
+  <div className='store-container'> 
+  <StoreNavbar/>
+    <h1 className='store-title'>PRODUTOS</h1>
+    <div className="store">
+      <VscArrowCircleLeft className='left-arrow' onClick={leftClick} />
+    <div className="carrossel" ref={carousel}>
 
-      {produtos.map((item) => {const {id, nome, preco, imagem} = item;
-        return(
-          <div className="products-content" key={id}>
+    {produtos.map((item) => {const {id, nome, preco, imagem} = item;
+      return(
+        <div className="products-content" key={id}>
 
-              <div className="product-img">
-                <Link to={`/produto/${item.id}`}> 
-                  <img src={imagem} alt={nome} className='produto'  />
-                </Link>
-              </div>
-            <div className="info">
-              <p className='product-description name'>{nome}</p>
-              <p className='product-description preco'>{preco}</p>
+            <div className="product-img">
+              <Link to={`/produto/${item.id}`}> 
+                <img src={imagem} alt={nome} className='produto'  />
+              </Link>
             </div>
-
+          <div className="info">
+            <p className='product-description name'>{nome}</p>
+            <p className='product-description preco'>{preco}</p>
           </div>
-            )
-          })}
-          </div>
-          <VscArrowCircleRight className='right-arrow' onClick={rightClick}/>
-          </div>
-      <StoreFooter />
-    </div>
+        <div className="add-carrinho">
+          <button className='carrinho-btn' onClick={addToCar} >Adicionar ao carrinho <p className='add-icon'>+</p></button>
+        </div>
+        </div>
+          )
+        })}
+        </div>
+        <VscArrowCircleRight className='right-arrow' onClick={rightClick}/>
+        </div>
+    <StoreFooter />
+  </div>
   )
 }
 

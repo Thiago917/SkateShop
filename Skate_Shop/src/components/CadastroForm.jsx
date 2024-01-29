@@ -55,12 +55,12 @@ const CadastroForm = () => {
   return (
     <form className='form-cadastro' onSubmit={handleOnCadastro}>
       <div className="cadastro-inputs">
-        <input type="email" placeholder='Insira seu email...' className='email-cadastro email' value={email} onChange={handleChangeEmail} />
+        <input type="email" placeholder='Email...' className='email-cadastro email' value={email} onChange={handleChangeEmail} />
           <div className="nomes">
-              <input type="text" placeholder='Insira seu nome...' className='nome nome-cadastro' value={nome} onChange={handleChangeNome} />
-              <input type="text" placeholder='Insira seu sobrenome...' className='sobrenome-cadastro nome' value={sobrenome} onChange={handleChangeSobrenome} />
+              <input type="text" placeholder='Primeiro nome...' className='nome nome-cadastro' value={nome} onChange={handleChangeNome} />
+              <input type="text" placeholder='Sobrenome...' className='sobrenome-cadastro nome' value={sobrenome} onChange={handleChangeSobrenome} />
           </div>
-        <input type={cadastroEyeIcon} placeholder='Insira sua senha...' className='senha senha-cadastro' value={primeiraSenha} onChange={handleChangePrimeiraSenha}/>
+        <input type={cadastroEyeIcon} placeholder='Senha...' className='senha senha-cadastro' value={primeiraSenha} onChange={handleChangePrimeiraSenha}/>
         <input type={secondCadastroEyeIcon} placeholder='Confirme sua senha...' className='confirm-senha-cadastro senha' value={segundaSenha} onChange={handleChangeSegundaSenha}/>
 
         <div className='cadastro-eye-icon' onClick={() => cadastroEyeIcon === 'password' ? setCadastroEyeIcon('text') : setCadastroEyeIcon('password')}>
@@ -77,7 +77,7 @@ const CadastroForm = () => {
 
       </div>
         <div className="btn-cadastro">
-          <button type='submit' className='cadastro-seend-button seend-button' >CADASTRE-SE</button>
+          <button type='submit' className='cadastro-seend-button seend-button' >Registrar</button>
         </div>
         <p className='comentary'>Já possui conta? <Link to='/' className='link'>Faça login</Link></p>
     </form>

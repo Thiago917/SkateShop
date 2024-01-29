@@ -4,20 +4,18 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-html{
-    scroll-behavior: smooth;
-}
+
 
 .right-arrow, .left-arrow{
     fill: rgb(201, 3, 3);
     width: 6vw;
     height: 5vh;
     cursor: pointer;
+    transition-duration: .4s;
 }
 
 ::-webkit-scrollbar{
     display: none;
-
 }
 
 .store-container{
@@ -40,47 +38,44 @@ html{
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 2%;
+    gap: 1%;
 }
 .store .carrossel{
     width: 80%;
-    height: 48.5vh;
+    height: 55vh;
     display: flex;
     overflow-x: auto;
-    margin-bottom: 1%;
+    overflow-y: auto;
     background-color: rgba(204, 205, 206, 0.048);    
+    gap: 10px;
 }
 
 .products-content{
-    height: 46.5vh;
+    height: 52vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
-    gap: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.151);
-    transition-duration: .3s;
 }
 
 .produto{
-    height: 100%;
     display: flex;
     width: 20vw;
-    padding: 10px
+    padding: 30px;
+    transition-duration: .3s;
 }
 
-.products-content:hover{
+.produto:hover{
     scale: 1.02;
 }
 
 .info{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     gap: 2px;
-    width: 101%;
-    min-height: 2vh;
-    padding-bottom: 20px;
-}
+    width: 100%;
+}   
 
 .product-description{
     font-size: 17px;
@@ -92,4 +87,46 @@ html{
     font-weight: 300;
     letter-spacing: 2px;
     font-family: 'Dela Gothic One', sans-serif;
+}
+
+.add-carrinho{
+    display: flex;
+    justify-content: center;
+    height: 4vh;
+    width: 90%;
+    margin-top: 10px;
+    border-top: 2px solid rgb(145, 9, 9);
+}
+.carrinho-btn{
+    display: flex;
+    padding-left: 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: 4vh;
+    width: 90%;
+    background-color: rgb(145, 9, 9);
+    color: ghostwhite;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin-top: 8px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.carrinho-btn:hover{
+    letter-spacing: 1px;
+}
+.add-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2vw;
+    height: 4.2vh;
+    font-size: 25px;
+    border: 1px solid ghostwhite;
+}
+
+.add-icon:hover{
+    letter-spacing: 0;
 }

@@ -61,7 +61,7 @@ return (
 </div>
 
 <div className="formulario">
-    <h2 className='compra-produto-description compra-price'>{product.preco}
+    <h2 className='compra-produto-description compra-price'>R${product.preco}
         <p className="compra-pric">ou em até 10x sem juros!</p>
     </h2>
     <form action="" className='compra-form' onSubmit={handleSubmit(onSubmit)} >

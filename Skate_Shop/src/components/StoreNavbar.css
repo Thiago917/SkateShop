@@ -42,9 +42,9 @@
 
 .carrinho-shop{
     display: flex;
-    padding-left: 0.7%;
     align-items: center;
-    min-width: 3.2vw;
+    justify-content: center;
+    min-width: 3vw;
     min-height: 6.5vh;
     background-color: rgba(201, 3, 3, 0.589);
     border-radius: 50%;
@@ -58,14 +58,6 @@
     cursor: pointer;
     transition-duration: .3s;   
 }
-
-.carrinho-item{
-    color: ghostwhite;
-    position: absolute;
-    right: 15%;
-    top: 20%;
-}
-
 .carrinho:hover{
     scale: 1.05;
 }

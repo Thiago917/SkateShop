@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carrinho-title{
+    text-align: center;
+    margin-bottom: 5%;
+}
+.carrinho-section{
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carrinho-compra{
+    height: 50vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 20px;
+    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.404);
+}
+
+.product-descript{
+    display: flex;
+    width: 90%;  
+    background-color: rgba(128, 128, 128, 0.034);
+    padding: 10px;
+    
+}
+.dad{
+    display: flex;
+    flex-direction: column;
+}
+.table-row{
+    display: flex;
+    width: 52vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+    padding-bottom: 10px;
+}
+
+.imagem-produto{
+    padding: 20px;
+    height: 40vh !important;
+    width: 26vw;
+}
+
+.produto-nome{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Dela Gothic One', sans-serif;
+    letter-spacing: 2px;
+}
+
+.titles{
+    min-width: 26.2vw;
+}
+.descrp{
+    text-align:center;
+    width: 20vw;
+    font-family: 'Dela Gothic One', sans-serif;
+}   
+
+.quantidade-produto{
+    padding-right: 30px;
+}
+td{
+    margin: 0 auto;
+    text-align: center;
+}
+
+td{
+    margin: auto;
+}
+
+.remove-item-btn{
+    display: grid;
+    place-items: center;
+    background-color: rgba(220, 220, 220, 0.527);
+    width: 2vw;
+    height: 5vh;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: .7;
+    transition-duration: .2s;
+}
+
+.remove-item-btn:hover{
+    opacity: 1;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.582);
+}
+
+
+.remove-item{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.resumo-carrinho{
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    width: 20vw;
+    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.404);
+    gap: 5%;
+}
+
+.resumo-compra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    font-family: 'Dela Gothic One', sans-serif;
+    letter-spacing: 1px;
+    background-color: rgba(220, 220, 220, 0.527);
+}
+
+.resumo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    height: 30vh;
+}
+.resumo-description, .resumo-description-value{
+    display: grid;
+    gap: 20px;
+}
+
+.descount-cumpon{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    width: 100%;
+    transition-duration: .2s;
+}
+
+.descount-cumpon:hover{
+    letter-spacing: 2px;
+    border-bottom: 1px solid green;
+}
+
+.resumo-value{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px
+}
+
+.compra-desc{
+    width: 5vw;
+    padding: 5px;
+    background-color: rgba(220, 220, 220, 0.527);
+}
+
+.final-compra{
+    padding: 10px;
+    width: 70%;
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(44, 158, 44);
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition-duration: .2s;
+}
+
+.final-compra:hover{
+    letter-spacing: 4px;
+    box-shadow: 1px 1px 12px green;
+}

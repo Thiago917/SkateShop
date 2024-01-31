@@ -35,7 +35,7 @@ const PaginaProduto = () => {
             <div className="produto-content">
                 <p className="produto-description name"> {product.nome} </p>  
                   <img src={product.imagem} alt="" className='produto-imagem'/>
-                <p className="produto-description price"> {product.preco} </p>
+                <p className="produto-description price"> R${product.preco} </p>
             </div>
 
         <div className="produtos">
@@ -43,7 +43,7 @@ const PaginaProduto = () => {
                   <p>Vendido e entregue por <Link className='company'>{product.empresa}</Link></p>
               </div>
               <div className="prices">
-                  <p className="produto-description price"> {product.preco} </p>
+                  <p className="produto-description price"> R${product.preco} </p>
                   <p className="">ou em até 10x sem juros!</p>
               </div>
              <div className="select-drescription">

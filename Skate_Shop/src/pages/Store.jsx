@@ -10,10 +10,12 @@ import tenis_puma from '../assets/tenis-puma.png'
 
 import StoreNavbar from '../components/StoreNavbar'
 import StoreFooter from '../components/StoreFooter'
+import carrinho from '../assets/carrinho.svg'
+
 // componentes
 
 
-import { Link, useSubmit } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import { VscArrowCircleLeft, VscArrowCircleRight } from "react-icons/vsc";
 import { useState } from 'react'
@@ -28,7 +30,7 @@ import './Store.css'
   {
     id: 1,
     nome: 'Calça Cargo Caqui',
-    preco:'R$ 119,90',
+    preco: Math.floor(Math.random() * 200) +1+',00',
     imagem: calca,
     empresa: 'Mizac',
     tamanho: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG'],
@@ -37,7 +39,7 @@ import './Store.css'
   {
     id: 2,
     nome: 'Camiseta Independent',
-    preco: 'R$ 79,90',
+    preco: Math.floor(Math.random() * 100) +1+',00',
     imagem: camiseta,
     empresa: 'Indepent Store',
     tamanho: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG'],
@@ -46,7 +48,7 @@ import './Store.css'
   {
     id: 3,
     nome: 'Moletom Santa Cruz',
-    preco: 'R$ 199,90',
+    preco: Math.floor(Math.random() * 250) +1+',00',
     imagem: moletom,
     empresa: 'Santa Cruz',
     tamanho: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG'],
@@ -55,7 +57,7 @@ import './Store.css'
   {
     id: 4,
     nome: 'Tenis New Balance',
-    preco: 'R$ 800,00',
+    preco: Math.floor(Math.random() * 800) +1+',00',
     imagem: tenis,
     empresa: 'New Balance',
     tamanho: ['36', '37', '38', '39', '40','41', '42'],
@@ -63,7 +65,7 @@ import './Store.css'
   {
     id: 5,
     nome: 'Skate Montado',
-    preco: 'R$ 399,90',
+    preco: Math.floor(Math.random() * 400) +',00',
     imagem: skate,
     empresa: 'Sk8 Store',
     tamanho: ['36', '37', '38', '39', '40','41', '42'],
@@ -71,7 +73,7 @@ import './Store.css'
   { 
     id: 6,
     nome: 'Tenis Puma Trinity',
-    preco: 'R$ 550,00',
+    preco: Math.floor(Math.random() * 500) +',00',
     imagem: tenis_puma,
     empresa: 'Puma',
     tamanho: ['36', '37', '38', '39', '40','41', '42'],
@@ -79,7 +81,7 @@ import './Store.css'
   { 
     id: 7,
     nome: 'Touca High Company',
-    preco: 'R$ 149,90',
+    preco: Math.floor(Math.random() * 150) +',00',
     imagem: touca,
     empresa: 'High Company',
     tamanho: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG'],
@@ -87,7 +89,7 @@ import './Store.css'
   { 
     id: 8,
     nome: 'Bermuda Overcome',
-    preco: 'R$ 149,90',
+    preco: Math.floor(Math.random() * 200) +',00',
     imagem: bermuda,
     empresa: 'Overcome',
     tamanho: ['PP', 'P', 'M', 'G', 'GG', 'XG', 'XGG'],
@@ -108,15 +110,12 @@ const Store = () => {
 
   }
 
-  const addToCar = () =>{
-    //
-  }
+  // const [ produto, setProduto ] = useState(0)
   
   const [ cart, setCart ] = useState([])
 
   const fetchData = () =>{
-    api.get('/carrinho').then((response) => setCart(response.data))
-    cart.length <= 0 ? console.log('') : console.log('')
+    api.get('/carrinho').then((response) => console.log(response.data))
   }
 
     // useEffect(() => {
@@ -124,9 +123,25 @@ const Store = () => {
     //   fetchData()
     // }, [])
   
+    // const handleAddItem = () =>{
+    //   alert('Produto adicionado ao carrinho!')
+    //   return setTimeout(window.location=`/carrinho/${produtos.id}`, 2500)
+    // }
+    // const items = handleAddItem()
+
+    // const queryItens = () =>{
+    //   api.get('/carrinho').then((response) => {
+    //     // console.log(response)
+    //     fetchData()
+    //   })
+    // }
+
   return (
   <div className='store-container'> 
   <StoreNavbar/>
+  <div className="carrinho-shop">
+    <img src={carrinho} className='carrinho' onClick={() => alert('Adicione um produto no carrinho!')}/>
+  </div>
     <h1 className='store-title'>PRODUTOS</h1>
     <div className="store">
       <VscArrowCircleLeft className='left-arrow' onClick={leftClick} />
@@ -137,20 +152,27 @@ const Store = () => {
         <div className="products-content" key={id}>
 
             <div className="product-img">
-              <Link to={`/produto/${item.id}`}> 
+              <Link to={`/produto/${id}`}> 
                 <img src={imagem} alt={nome} className='produto'  />
               </Link>
             </div>
           <div className="info">
             <p className='product-description name'>{nome}</p>
-            <p className='product-description preco'>{preco}</p>
+            <p className='product-description preco'>R${preco}</p>
           </div>
         <div className="add-carrinho">
-          <button className='carrinho-btn' onClick={addToCar} >Adicionar ao carrinho <p className='add-icon'>+</p></button>
+          <button className='carrinho-btn' onClick={() => {
+            alert('Produto adicionado ao carrinho') 
+            return setTimeout(window.location=`/carrinho/${id}`, 3000)
+            }}>
+              Adicionar ao carrinho 
+              <p className='add-icon'>+</p>
+          </button>
         </div>
         </div>
           )
         })}
+        {/* })} */}
         </div>
         <VscArrowCircleRight className='right-arrow' onClick={rightClick}/>
         </div>

@@ -8,6 +8,7 @@ import Entrega from './pages/sub-pages/Entrega'
 import Store from './pages/Store'
 import PaginaProduto from './pages/PaginaProduto'
 import Compra from './pages/Compra'
+import Car from './pages/sub-pages/Car'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -25,6 +26,7 @@ const AppRoutes = () => {
         <Route path='/store' element={<Store />} /> 
         <Route path='/produto/:id' element={<PaginaProduto />} /> 
         <Route path='/compra/:id' element={<Compra />} /> 
+        <Route path='/carrinho/:id' element={<Car />} /> 
       </Routes>
     </BrowserRouter>
   )

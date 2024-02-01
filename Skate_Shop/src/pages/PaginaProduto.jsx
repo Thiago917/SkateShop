@@ -24,7 +24,7 @@ const PaginaProduto = () => {
   }
 
   const [ positivo, setPositivo ] = useState(1)
-  {positivo < 1 ? setPositivo(1) : ''}
+  {positivo < 1 || positivo === 6? setPositivo(1) : ''}
 
 
 

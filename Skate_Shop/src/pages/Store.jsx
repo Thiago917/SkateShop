@@ -109,8 +109,6 @@ const Store = () => {
     carousel.current.scrollLeft += carousel.current.offsetWidth
 
   }
-
-  // const [ produto, setProduto ] = useState(0)
   
   const [ cart, setCart ] = useState([])
 
@@ -118,23 +116,23 @@ const Store = () => {
     api.get('/carrinho').then((response) => console.log(response.data))
   }
 
-    // useEffect(() => {
-    //   axios 
-    //   fetchData()
-    // }, [])
+    useEffect(() => {
+      axios   
+      fetchData()
+    }, [])
   
-    // const handleAddItem = () =>{
-    //   alert('Produto adicionado ao carrinho!')
-    //   return setTimeout(window.location=`/carrinho/${produtos.id}`, 2500)
-    // }
-    // const items = handleAddItem()
+    const handleAddItem = () =>{
+      alert('Produto adicionado ao carrinho!')
+      return setTimeout(window.location=`/carrinho/${produtos.id}`, 2500)
+    }
+    const items = handleAddItem()
 
-    // const queryItens = () =>{
-    //   api.get('/carrinho').then((response) => {
-    //     // console.log(response)
-    //     fetchData()
-    //   })
-    // }
+    const queryItens = () =>{
+      api.get('/carrinho').then((response) => {
+        // console.log(response)
+        fetchData()
+      })
+    }
 
   return (
   <div className='store-container'> 
@@ -172,7 +170,6 @@ const Store = () => {
         </div>
           )
         })}
-        {/* })} */}
         </div>
         <VscArrowCircleRight className='right-arrow' onClick={rightClick}/>
         </div>

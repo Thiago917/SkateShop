@@ -11,7 +11,7 @@ const Car = () =>{
     const produto = produtos.map((item) => item.id === parseInt(id) ? item : null).filter(e => e !== null)[0]
 
     const [ positivo, setPositivo ] = useState(1)
-    {positivo < 1? setPositivo(1): ''}
+    {positivo < 1 || positivo === 6 ? setPositivo(1): ''}
 7
     const valorTotal = parseInt(produto.preco) * positivo
     const frete = 10

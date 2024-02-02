@@ -125,14 +125,14 @@ const Store = () => {
       alert('Produto adicionado ao carrinho!')
       return setTimeout(window.location=`/carrinho/${produtos.id}`, 2500)
     }
-    const items = handleAddItem()
+    // const items = handleAddItem()
 
-    const queryItens = () =>{
-      api.get('/carrinho').then((response) => {
-        // console.log(response)
-        fetchData()
-      })
-    }
+    // const queryItens = () =>{
+    //   api.get('/carrinho').then((response) => {
+    //     // console.log(response)
+    //     fetchData()
+    //   })
+    // }
 
   return (
   <div className='store-container'> 
